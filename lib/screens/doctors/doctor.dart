@@ -1,0 +1,1 @@
+export 'view/doctorlist.dart';
