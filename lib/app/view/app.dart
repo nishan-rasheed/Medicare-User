@@ -17,6 +17,7 @@ class App extends StatelessWidget {
         FocusManager.instance.primaryFocus!.unfocus();
       },
       child: MaterialApp(
+        scrollBehavior: MyCustomScrollBehavior(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
@@ -29,8 +30,20 @@ class App extends StatelessWidget {
           GlobalMaterialLocalizations.delegate,
         ],
         supportedLocales: AppLocalizations.supportedLocales,
-       home: const LoginScreen(),
+       home: LoginScreen(),
       ),
     );
+  }
+}
+
+
+
+///
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+
+  @override
+  Widget buildOverscrollIndicator(
+    BuildContext context, Widget child, ScrollableDetails details,) {
+    return child;
   }
 }

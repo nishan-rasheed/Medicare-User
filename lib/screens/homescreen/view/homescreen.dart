@@ -81,10 +81,15 @@ class HomeScreen extends StatelessWidget {
                 color: Color(0XffF7FAFE),
               ),
               child: const TextField(
+                cursorHeight:20,
                 decoration: InputDecoration(
                     border: InputBorder.none,
                     prefixIcon: Icon(Icons.search),
-                    hintText: '   search here'),
+                    hintText: '   search here',
+                    hintStyle: TextStyle(
+                      fontSize: 18
+                    )
+                    ),                   
               ),
             ),
             Expanded(
@@ -174,7 +179,7 @@ class HomeScreen extends StatelessWidget {
                           itemCount: 10,
                           itemBuilder: (context, index) {
                             return Container(
-                              margin: EdgeInsets.only(left: 10),
+                              margin: EdgeInsets.only(left: 10,right: 10,),
                               padding: EdgeInsets.all(
                                 5,
                               ),

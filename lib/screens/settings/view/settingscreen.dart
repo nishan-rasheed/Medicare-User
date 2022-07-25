@@ -8,7 +8,8 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
-  bool _toggle = false;
+  bool _nightMode = false;
+  bool _emailAlert = false;
   
   TextStyle titleText = const TextStyle(
           fontSize: 22,
@@ -52,31 +53,42 @@ class _SettingScreenState extends State<SettingScreen> {
           activeColor:const  Color(0Xff8883F0),
           title: Text('Night Mode',style: titleText,),
           subtitle: Text('Off',style: greyText,),
-          value:_toggle,
+          value:_nightMode,
           onChanged: (bool value){
             setState(() {
-             _toggle = value ;
+             _nightMode = value ;
             });
           },),
+          SwitchListTile(
+          activeColor:const  Color(0Xff8883F0),
+          title: Text('Email Notification',style: titleText,),
+          subtitle: Text('Off',style: greyText,),
+          value:_emailAlert,
+          onChanged: (bool value){
+            setState(() {
+             _emailAlert = value ;
+            });
+          },),
+
           Container(
-            height: 250,
+            height: 160,
             width: 300,
-          
+            
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 const Text('medicare@gmail.com',style: TextStyle(
-                  color:Color(0XffEF8481),
+                  color: Color(0Xff8883F0),
                   fontSize: 18,
                 ),),
                const  SizedBox(height: 5,),
                 const Text('contact : 0476 2343544',style: TextStyle(
-                  color:Color(0XffEF8481),
+                  color:Color(0Xff8883F0),
                   fontSize: 15,
                 ),),
                 const SizedBox(height: 5,),
                 const Text('Calicut,kerala',style: TextStyle(
-                 color:Color(0XffEF8481),
+                 color:Color(0Xff8883F0),
                   fontSize: 15,
                 ),),
                const  SizedBox(height: 40,),

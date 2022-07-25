@@ -34,7 +34,7 @@ class ProfileScreen extends StatelessWidget {
                 padding: const  EdgeInsets.only(left: 35,),
                 width: 300,
                 height: 250,
-                color: Colors.green,
+                // color: Colors.green,
                 child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Row(
